@@ -4,7 +4,6 @@ export const fileNamer = (
   file: Express.Multer.File,
   callback: Function,
 ) => {
-  console.log(file);
 
   if (!file) return callback(new Error('File is empty'), false);
 
