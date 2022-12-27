@@ -20,7 +20,7 @@ interface SeedUser {
   email: string;
   fullName: string;
   password: string;
-  role: string[];
+  roles: string[];
 }
 
 interface SeedData {
@@ -34,19 +34,19 @@ export const initialData: SeedData = {
       email: 'admin@prueba.com',
       fullName: 'ADMIN SEED',
       password: bcrypt.hashSync('PasswordAdmin1', 10),
-      role: [ValidRoles.ADMIN],
+      roles: [ValidRoles.ADMIN],
     },
     {
       email: 'user@prueba.com',
       fullName: 'USER SEED',
       password: bcrypt.hashSync('PasswordUser1', 10),
-      role: [ValidRoles.USER],
+      roles: [ValidRoles.USER],
     },
     {
       email: 'superUser@prueba.com',
       fullName: 'SUPER USER SEED',
       password: bcrypt.hashSync('PasswordSuperUser1', 10),
-      role: [ValidRoles.SUPER_USER],
+      roles: [ValidRoles.SUPER_USER],
     },
   ],
   products: [

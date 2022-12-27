@@ -7,7 +7,6 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import * as bcrypt from 'bcrypt';
 
 @Entity('users')
 export class User {

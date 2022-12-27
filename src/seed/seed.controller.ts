@@ -1,15 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
-import { Auth, GetUser } from 'src/auth/decorators';
-import { User } from 'src/auth/entities/user.entity';
-import { ValidRoles } from 'src/auth/interfaces';
+import { ApiTags } from '@nestjs/swagger';
 import { SeedService } from './seed.service';
 
 @Controller('seed')
 export class SeedController {
   constructor(private readonly seedService: SeedService) {}
 
+  @ApiTags('Seed')
   @Get()
-  @Auth(ValidRoles.ADMIN)
   runSeed() {
     return this.seedService.runSeed();
   }
