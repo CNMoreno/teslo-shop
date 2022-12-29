@@ -55,46 +55,40 @@ export class Product {
   @ApiProperty({
     example: 't_shirt_teslo',
     description: 'Product description',
-    uniqueItems: true
+    uniqueItems: true,
   })
   @Column('text', {
     unique: true,
   })
   slug: string;
 
-  @ApiProperty(
-    {
-      example: 10,
-      description: 'Product stock',
-      uniqueItems: true,
-      default: 0
-    }
-  )
+  @ApiProperty({
+    example: 10,
+    description: 'Product stock',
+    uniqueItems: true,
+    default: 0,
+  })
   @Column('int', {
     default: 0,
   })
   stock: number;
 
-  @ApiProperty(
-    {
-      example: ['M', 'XL', 'XXL'],
-      description: 'Product Sizes',
-      uniqueItems: true,
-    }
-  )
+  @ApiProperty({
+    example: ['M', 'XL', 'XXL'],
+    description: 'Product Sizes',
+    uniqueItems: true,
+  })
   @Column('text', {
     array: true,
   })
   sizes: string[];
 
-  @ApiProperty(
-    {
-      example: 'men',
-      description: 'Product gender',
-      uniqueItems: true,
-      enum: ['men', 'women', 'kid', 'unisex']
-    }
-  )
+  @ApiProperty({
+    example: 'men',
+    description: 'Product gender',
+    uniqueItems: true,
+    enum: ['men', 'women', 'kid', 'unisex'],
+  })
   @Column('text')
   gender: string;
 

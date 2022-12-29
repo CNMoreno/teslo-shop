@@ -29,7 +29,7 @@ export class ProductsController {
   @ApiResponse({
     status: 201,
     description: 'Product was created',
-    type: Product
+    type: Product,
   })
   @ApiResponse({
     status: 400,

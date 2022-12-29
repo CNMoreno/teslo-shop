@@ -23,7 +23,7 @@ export class MessagesWsService {
     if (!user) throw new Error('User not found');
     if (!user.isActive) throw new Error('User not active');
 
-    this.checkUserConnection(user)
+    this.checkUserConnection(user);
     this.connectedClients[client.id] = {
       socket: client,
       user,
